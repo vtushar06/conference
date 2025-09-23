@@ -898,6 +898,7 @@ body>header .logo img {
 body>header label {
 	display: none;
 	opacity: .5;
+	position: relative;
 	padding: .1em;
 	border: .25rem solid transparent;
 	border: var(--space-2) solid transparent;
@@ -915,6 +916,14 @@ body>header label .icon {
 
 body>header label .icon-menu {
 	display: block
+}
+
+/* Close icon */
+body > header label .icon-close {
+    position: absolute;   
+    bottom: 8rem;          
+    right: 5rem;        
+    cursor: pointer;
 }
 
 body>header input[type=checkbox]:checked~label .icon-menu,
@@ -1496,7 +1505,7 @@ body > footer .footer-header .follow #slack:hover{
 
 .jumbo .jumbo-cover {
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: no-repeat;
 	background-position: 50%
 }
 
@@ -1607,6 +1616,12 @@ body > footer .footer-header .follow #slack:hover{
 	.jumbo .inner h1 img {
 		max-width: 100%
 	}
+	 .jumbo .jumbo-logo {
+        margin-top : 0.25rem;  /* scale logo for mobile */
+    }
+	.jumbo .jumbo-cover {
+        min-width : 950px;
+    }
 }
 
 .hero .description {
